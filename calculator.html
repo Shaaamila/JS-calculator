@@ -3,8 +3,10 @@
         <div><title>JS Basic Calculator</title></div>
         <table border="2">
             <tr>
-                <td><input type="button" value="c" onclick="clr()"></td>
                 <td colspan="3"><input type="text" id="textval"></td>
+            </tr>
+            <tr>
+                <td colspan="1"><input type="button" value="c" onclick="clr()"></td>
             </tr>
             <tr>
                 <td><input type="button" value="7" onclick="display('7')"></td>
@@ -45,5 +47,18 @@
             document.getElementById("textval").value = "";
         };
     </script>
-
+    <style>
+        input[type="button"]
+        {
+            border-radius: 10px;
+            background-color: deepskyblue;
+            color: white;
+            border-color: black;
+            width: 100%
+        };
+        input[type="text"]
+        {
+            text-align: right;
+        };
+    </style>
 </html>
