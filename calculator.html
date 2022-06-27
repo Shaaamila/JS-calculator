@@ -1,7 +1,7 @@
 <html>
     <body>
         <div><title>JS Basic Calculator</title></div>
-        <table>
+        <table border="2">
             <tr>
                 <td><input type="button" value="c" onclick="clr()"></td>
                 <td colspan="3"><input type="text" id="textval"></td>
@@ -28,9 +28,22 @@
                 <td><input type="button" value="0" onclick="display('0')"></td>
                 <td><input type="button" value="." onclick="display('.')"></td>
                 <td><input type="button" value="/" onclick="display('/')"></td>
-                <td><input type="button" value="=" onclick="display('=')"></td>
+                <td><input type="button" value="=" onclick="calculate()"></td>
             </tr>
         </table>
     </body>
+    <script>    
+        function display(val){
+            document.getElementById("textval").value+=val;
+        };
+        function calculate(){
+            let x = document.getElementById("textval").value;
+            let y = eval(x);
+            document.getElementById("textval").value = y;
+        };
+        function clr(){
+            document.getElementById("textval").value = "";
+        };
+    </script>
 
 </html>
